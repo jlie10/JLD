@@ -1,0 +1,172 @@
+<Config>
+	<Parameter>
+		<Name>PARAMETERS</Name>
+		<Description><info><![CDATA[This is a configuration file editor designed to choose parameter values before launching Evolife simulations.<br><br>Its use is rather intuitive. You may click directly on values you want to change, or navigate with arrows and use the [F2] key to edit values.<br><br>Pay attention to explanations displayed in this panel.]]></info></Description>
+	</Parameter>
+	<Parameter>
+		<Name>Scenario</Name>
+		<Parameter>
+			<Name>ScenarioName</Name>
+			<Value>Sacrifice</Value>
+		</Parameter>
+		<Parameter>
+			<Name>ScenarioFileName</Name>
+			<Value>Sacrifice.evo</Value>
+		</Parameter>
+	</Parameter>
+	<Parameter>
+		<Name>Ecology</Name>
+		<Description><info><![CDATA[<br>]]></info></Description>
+		<Parameter>
+			<Name>PopulationSize</Name>
+			<Description><info><![CDATA[The size of the population is maintained constant <br><br>]]></info></Description>
+			<Value>400</Value>
+		</Parameter>
+		<Parameter>
+			<Name>ReproductionRate</Name>
+			<Description><info><![CDATA[Proportion of the population that is replaced with newborns each year (in %)<br>]]></info></Description>
+			<Value>15</Value>
+		</Parameter>
+		<Parameter>
+			<Name>SelectionPressure</Name>
+			<Description><info><![CDATA[Defines how individual survival depends on score:<br><br>0 -->&nbsp;&nbsp; no bias<br>12 -->&nbsp;&nbsp;Highest scores may have 12 times less chance to be eliminated<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;than individuals with lowest scores<br><br>(Note that selection may also be achieved through differential reproduction<br>(see parameter Selectivity))<br><br>Important: For selection pressure to operate properly, scores should always be positive<br><br>Warning: This selection method tends to "saturate": when most scores reach high values,<br>the method is blind to slight differences among individuals. However, it might be less<br>violent than the selectivity method, which has converse qualities.<br><br>At the beginning of the 'Selection pressure' process, scores are linearly converted into life points (from 0 to SelectionPressure). Then individuals are repeatedly exposed to random accidents that cost them a life point. The process is repeated until the size of the population is brought back to its maximal value.]]></info></Description>
+			<Value>0</Value>
+		</Parameter>
+		<Parameter>
+			<Name>Selectivity</Name>
+			<Description><info><![CDATA[Defines how parenthood is biased toward individuals with high scores<br><br>S == 0 --> no bias<br>S == 1 --> elitism is roughly linear<br>S == 20 --> strong elitism<br>S == 40 --> very strong elitism<br><br>(Note that selection may also be achieved through differential mortality <br>(see parameter SelectionPressure))<br><br> Warning: This selection method is elitist. It amplifies small differences among top inidividuals, <br>but fails to discriminate among the crowd. It favours extreme (or lucky) behaviour. The SelectionPressure method has converse <br>qualities.<br><br>At the beginning of the 'selectivity' process, individuals are ranked, based on their score. They are given a number of children that depends on their rank (which depends non-linearly on their score). Parents are repeatedly drawn from the set of individuals that still have children to beget.]]></info></Description>
+			<Value>10</Value>
+		</Parameter>
+		<Parameter>
+			<Name>AgeMax</Name>
+			<Description><info><![CDATA[after that age, the agent is reborn]]></info></Description>
+			<Value>1000</Value>
+		</Parameter>
+		<Parameter>
+			<Name>Rounds</Name>
+			<Description><info><![CDATA[Numbers of times each individual interacts with others each year]]></info></Description>
+			<Value>10</Value>
+		</Parameter>
+		<Parameter>
+			<Name>Noise</Name>
+			<Description><info><![CDATA[Amplitude of a multiplicative noise<br>in % between 0 and 100<br>that may affect interactions in some<br>scenarios.<br>]]></info></Description>
+			<Value>0</Value>
+		</Parameter>
+	</Parameter>
+	<Parameter>
+		<Name>Genetics</Name>
+		<Parameter>
+			<Name>MutationRate</Name>
+			<Description><info><![CDATA[Mutation rate in xxx/1000 <br>]]></info></Description>
+			<Value>5</Value>
+		</Parameter>
+		<Parameter>
+			<Name>NbCrossover</Name>
+			<Description><info><![CDATA[Indicates the number of cut points when performing crossover]]></info></Description>
+			<Value>1</Value>
+		</Parameter>
+		<Parameter>
+			<Name>GeneCoding</Name>
+			<Description><info><![CDATA[Indicates the way portions of DNA should ne interpreted<br>- Weighted: standard integer binary coding<br>- Unweighted: all bits play symmertrical roles <br>- Gray: Gray code<br>- Nocoding: genome is not decoded<br><br>Note: the WEIGHTED method may provoke sudden changes in gene expression. This may be good to escape from local <br>optima, since in the UNWEIGHTED condition, several mutations must be accumulated in the same individuals for significant change to occur.]]></info></Description>
+			<Value>Weighted</Value>
+			<Parameter>
+				<Name>Weighted</Name>
+				<Description><info><![CDATA[Genes interpreted as standard integer coding.<br>Advantage: many available values;<br>&nbsp;&nbsp;&nbsp;&nbsp;variable selection pressure on loci:<br>&nbsp;&nbsp;&nbsp;&nbsp;important loci evolve first.<br>&nbsp;&nbsp;&nbsp;&nbsp;Mutations on low bits have local effects<br>Caveat: getting from&nbsp;&nbsp;011111 to 100000 requires<br>&nbsp;&nbsp;&nbsp;&nbsp;six mutations, though the values are adjacent.]]></info></Description>
+				<Value>0</Value>
+			</Parameter>
+			<Parameter>
+				<Name>Unweighted</Name>
+				<Description><info><![CDATA[Genes interpreted as the sum of their bits<br>Advantage: all puncutal mutation have local effects<br>Caveat: only few values allowed if gene length is small, <br>&nbsp;&nbsp;&nbsp;&nbsp;and very slow evolution and high sensitivity to noise<br>&nbsp;&nbsp;&nbsp;&nbsp;if gene length is large]]></info></Description>
+				<Value>1</Value>
+			</Parameter>
+			<Parameter>
+				<Name>Gray</Name>
+				<Description><info><![CDATA[Genes are interpreted using a Gray code.<br>In a Gray code, neighbouring integers differ by only one bit.<br>Advantage: neighbouring values are reachable by punctual mutations <br>Caveat: most punctual mutations have non-local effects]]></info></Description>
+				<Value>2</Value>
+			</Parameter>
+			<Parameter>
+				<Name>NoCoding</Name>
+				<Value>-1</Value>
+			</Parameter>
+		</Parameter>
+		<Parameter>
+			<Name>GeneLength</Name>
+			<Description><info><![CDATA[Some scenarios don't specify gene length (by setting it to zero).<br>The value indicated here is taken as default value in this case.]]></info></Description>
+			<Value>10</Value>
+		</Parameter>
+		<Parameter>
+			<Name>DNAFill</Name>
+			<Description><info><![CDATA[DNA created from scratch may be random (DNAFill = -1) <br>or filled withl 0s (DNAFill = 0) or with 1s (DNAFill =1)]]></info></Description>
+			<Value>0</Value>
+		</Parameter>
+		<Parameter>
+			<Name>StartFromFile</Name>
+			<Description><info><![CDATA[Binary flag indicating if the population should be generated from<br>the genomes stored in the text file 'EvoStart.gen'<br>1 = reads 'EvoStart.gen'<br>0 = creates a new population from scratch (see parameter DNAFill)]]></info></Description>
+			<Value>0</Value>
+		</Parameter>
+	</Parameter>
+	<Parameter>
+		<Name>Sociology</Name>
+		<Parameter Scenario="Sacrifice">
+			<Name>ChildrenBonus</Name>
+			<Description><info><![CDATA[Advantage obtained by heroes' children]]></info></Description>
+			<Value>100</Value>
+		</Parameter>
+		<Parameter Scenario="Sacrifice">
+			<Name>SiblingBonus</Name>
+			<Description><info><![CDATA[Advantage obtained by heroes' siblings]]></info></Description>
+			<Value>100</Value>
+		</Parameter>
+	</Parameter>
+	<Parameter>
+		<Name>Simulation</Name>
+		<Parameter>
+			<Name>BatchMode</Name>
+			<Description><info><![CDATA[set BatchMode to 1 to prevent display]]></info></Description>
+			<Value>0</Value>
+		</Parameter>
+		<Parameter>
+			<Name>TimeLimit</Name>
+			<Description><info><![CDATA[Max number of simulation steps]]></info></Description>
+			<Value>10000</Value>
+		</Parameter>
+		<Parameter>
+			<Name>ApplicationDir</Name>
+			<Description><info><![CDATA[Directory where the simulation can be found]]></info></Description>
+			<Value>.</Value>
+		</Parameter>
+		<Parameter>
+			<Name>Target</Name>
+			<Description><info><![CDATA[Programme to be executed]]></info></Description>
+			<Value>Sacrifice.py</Value>
+		</Parameter>
+		<Parameter>
+			<Name>RunConfigFile</Name>
+			<Description><info><![CDATA[Parameter values that will be read by the programme]]></info></Description>
+			<Value>Sacrifice.evo</Value>
+		</Parameter>
+		<Parameter>
+			<Name>DumpStart</Name>
+			<Description><info><![CDATA[Points located below this x-value are discarded from the computation of average values.<br>Average values thus reflect the stable regime.]]></info></Description>
+			<Value>500</Value>
+		</Parameter>
+	</Parameter>
+	<Parameter>
+		<Name>Display</Name>
+		<Parameter>
+			<Name>DisplayPeriod</Name>
+			<Description><info><![CDATA[Display period]]></info></Description>
+			<Value>20</Value>
+		</Parameter>
+		<Parameter>
+			<Name>Title</Name>
+			<Description><info><![CDATA[Name of the present Configuration Editor]]></info></Description>
+			<Value>Evolife_Sacrifice</Value>
+		</Parameter>
+		<Parameter>
+			<Name>Icon</Name>
+			<Description><info><![CDATA[local path to window icon]]></info></Description>
+			<Value>samourai.jpg</Value>
+		</Parameter>
+	</Parameter>
+</Config>

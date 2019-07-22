@@ -1,0 +1,2 @@
+Date;AgeMax;BatchMode;ChildrenBonus;DNAFill;DisplayPeriod;DumpStart;GeneCoding;GeneLength;Icon;MutationRate;NbCrossover;PopulationSize;ReproductionRate;ScenarioName;SelectionPressure;Selectivity;SiblingBonus;StartFromFile;TimeLimit;Title;LastStep;Readiness;Risk;NbSuicides
+190718094911;1000;0;100;0;20;500;Weighted;10;samourai.jpg;5;1;100;15;Sacrifice;0;10;0;0;10000;Evolife_Sacrifice;5640;14;1;2
