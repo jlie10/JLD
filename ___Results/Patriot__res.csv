@@ -1,2 +1,2 @@
 Date;AgeMax;BatchMode;DNAFill;DisplayPeriod;DumpStart;FriendImpact;GeneCoding;GeneLength;Icon;LonelinessPenalty;MaxFriends;MutationRate;NbCrossover;Noise;PatriotRatio;PopulationSize;ReproductionRate;Rounds;ScenarioName;SelectionPressure;Selectivity;SignallingCost;Solidarity;StartFromFile;TimeLimit;Title;TraitorBenefit;TraitorMaxSIgnal;TreasonImpact;TreasonProbability;LastStep;PatriotSignal;DemandForPatriotism;NonPatriotSignal
-190722153643;30;0;-1;20;500;50;Weighted;10;samourai.jpg;100;5;5;1;5;70;200;15;3;Patriot;10;0;80;300;0;10000;Evolife_Patriot;200;50;1000;20;7579;62;45;69
+190724143606;30;0;-1;20;500;50;Weighted;10;samourai.jpg;100;5;5;1;5;70;200;15;3;Patriot;10;0;80;300;0;10000;Evolife_Patriot;200;50;1000;20;60;0;0;0

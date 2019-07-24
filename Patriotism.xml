@@ -241,12 +241,12 @@
 	<Parameter>
 		<Name>NbInteractions</Name>
 		<Description><info><![CDATA[NbInteractions]]></info></Description>
-		<Value>100</Value>
+		<Value>0</Value>
 	</Parameter>
 	<Parameter>
 		<Name>NbRunPerYear</Name>
 		<Description><info><![CDATA[NbRunPerYear]]></info></Description>
-		<Value>20</Value>
+		<Value>0</Value>
 	</Parameter>
 	<Parameter>
 		<Name>Gray</Name>

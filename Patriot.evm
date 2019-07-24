@@ -1,0 +1,4 @@
+Noise	0	
+PopulationSize	100
+SignallingCost	80
+BatchMode   1

@@ -16,8 +16,8 @@ LonelinessPenalty	100
 MaxFriends	5
 MutationRate	5
 NbCrossover	1
-NbInteractions	100
-NbRunPerYear	20
+NbInteractions	0
+NbRunPerYear	0
 NoCoding	-1
 Noise	5
 PatriotRatio	70
