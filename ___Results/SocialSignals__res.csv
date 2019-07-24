@@ -1,2 +1,0 @@
-Date;AgeMax;BatchMode;DNAFill;DisplayPeriod;DumpStart;GeneCoding;GeneLength;GroupMinSize;Icon;MaxGurus;MutationRate;NbCrossover;NumberOfGroups;PopulationSize;ReproductionRate;ResultDir;Rounds;ScenarioName;SelectionPressure;Selectivity;StartFromFile;TimeLimit;Title;LastStep;Readiness
-190716170225;1000;0;-1;5;5000;Weighted;10;0;social-media-social-networking-connections.jpg;1;5;1;1;100;5;./___Results;10;SocialSignals;12;10;0;3000;Evolife_SocialSignals;14158;76

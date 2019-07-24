@@ -113,6 +113,7 @@ class Individual(EI.EvolifeIndividual):
 	def suicide(self):
 		if self.score() > 0 and random.randint(0, 100) < self.Phene_value('Risk'):
 			self.score(0, FlagSet=True)
+			#self.LifePoints = -1 # TEST
 			# let children benefit from suicide
 			for child in self.Children:	child.score(self.Scenario['ChildrenBonus'])
 			for sibling in self.Siblings:	sibling.score(self.Scenario['SiblingBonus'])

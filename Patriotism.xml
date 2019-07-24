@@ -7,11 +7,11 @@
 		<Name>Scenario</Name>
 		<Parameter>
 			<Name>ScenarioName</Name>
-			<Value>Patriot</Value>
+			<Value>Sacrifice</Value>
 		</Parameter>
 		<Parameter>
 			<Name>ScenarioFileName</Name>
-			<Value>Patriot.evo</Value>
+			<Value>Sacrifice.evo</Value>
 		</Parameter>
 	</Parameter>
 	<Parameter>
@@ -30,12 +30,12 @@
 		<Parameter>
 			<Name>SelectionPressure</Name>
 			<Description><info><![CDATA[Defines how individual survival depends on score:<br><br>0 -->&nbsp;&nbsp; no bias<br>12 -->&nbsp;&nbsp;Highest scores may have 12 times less chance to be eliminated<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;than individuals with lowest scores<br><br>(Note that selection may also be achieved through differential reproduction<br>(see parameter Selectivity))<br><br>Important: For selection pressure to operate properly, scores should always be positive<br><br>Warning: This selection method tends to "saturate": when most scores reach high values,<br>the method is blind to slight differences among individuals. However, it might be less<br>violent than the selectivity method, which has converse qualities.<br><br>At the beginning of the 'Selection pressure' process, scores are linearly converted into life points (from 0 to SelectionPressure). Then individuals are repeatedly exposed to random accidents that cost them a life point. The process is repeated until the size of the population is brought back to its maximal value.]]></info></Description>
-			<Value>10</Value>
+			<Value>0</Value>
 		</Parameter>
 		<Parameter>
 			<Name>Selectivity</Name>
 			<Description><info><![CDATA[Defines how parenthood is biased toward individuals with high scores<br><br>S == 0 --> no bias<br>S == 1 --> elitism is roughly linear<br>S == 20 --> strong elitism<br>S == 40 --> very strong elitism<br><br>(Note that selection may also be achieved through differential mortality <br>(see parameter SelectionPressure))<br><br> Warning: This selection method is elitist. It amplifies small differences among top inidividuals, <br>but fails to discriminate among the crowd. It favours extreme (or lucky) behaviour. The SelectionPressure method has converse <br>qualities.<br><br>At the beginning of the 'selectivity' process, individuals are ranked, based on their score. They are given a number of children that depends on their rank (which depends non-linearly on their score). Parents are repeatedly drawn from the set of individuals that still have children to beget.]]></info></Description>
-			<Value>0</Value>
+			<Value>10</Value>
 		</Parameter>
 		<Parameter>
 			<Name>AgeMax</Name>
@@ -45,7 +45,7 @@
 		<Parameter>
 			<Name>Noise</Name>
 			<Description><info><![CDATA[Amplitude of a multiplicative noise<br>in % between 0 and 100<br>that affects interactions]]></info></Description>
-			<Value>5</Value>
+			<Value>0</Value>
 		</Parameter>
 	</Parameter>
 	<Parameter>
@@ -106,7 +106,7 @@
 		<Parameter Scenario="Sacrifice">
 			<Name>SiblingBonus</Name>
 			<Description><info><![CDATA[Advantage obtained by heroes' siblings]]></info></Description>
-			<Value>0</Value>
+			<Value>100</Value>
 		</Parameter>
 	</Parameter>
 	<Parameter>
@@ -182,12 +182,12 @@
 		<Parameter>
 			<Name>Target</Name>
 			<Description><info><![CDATA[Programme to be executed]]></info></Description>
-			<Value>Patriot.py</Value>
+			<Value>Sacrifice.py</Value>
 		</Parameter>
 		<Parameter>
 			<Name>RunConfigFile</Name>
 			<Description><info><![CDATA[Parameter values that will be read by the programme]]></info></Description>
-			<Value>___Patriot.evo</Value>
+			<Value>___Sacrifice.evo</Value>
 		</Parameter>
 		<Parameter>
 			<Name>DumpStart</Name>
@@ -205,7 +205,7 @@
 		<Parameter>
 			<Name>Title</Name>
 			<Description><info><![CDATA[Name of the present Configuration Editor]]></info></Description>
-			<Value>Evolife_Patriot</Value>
+			<Value>Evolife_Sacrifice</Value>
 		</Parameter>
 		<Parameter>
 			<Name>Icon</Name>
@@ -241,12 +241,12 @@
 	<Parameter>
 		<Name>NbInteractions</Name>
 		<Description><info><![CDATA[NbInteractions]]></info></Description>
-		<Value>0</Value>
+		<Value>100</Value>
 	</Parameter>
 	<Parameter>
 		<Name>NbRunPerYear</Name>
 		<Description><info><![CDATA[NbRunPerYear]]></info></Description>
-		<Value>0</Value>
+		<Value>20</Value>
 	</Parameter>
 	<Parameter>
 		<Name>Gray</Name>
