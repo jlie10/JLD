@@ -7,11 +7,11 @@
 		<Name>Scenario</Name>
 		<Parameter>
 			<Name>ScenarioName</Name>
-			<Value>Sacrifice</Value>
+			<Value>Patriot</Value>
 		</Parameter>
 		<Parameter>
 			<Name>ScenarioFileName</Name>
-			<Value>Sacrifice.evo</Value>
+			<Value>_Params.evo</Value>
 		</Parameter>
 	</Parameter>
 	<Parameter>
@@ -30,12 +30,12 @@
 		<Parameter>
 			<Name>SelectionPressure</Name>
 			<Description><info><![CDATA[Defines how individual survival depends on score:<br><br>0 -->&nbsp;&nbsp; no bias<br>12 -->&nbsp;&nbsp;Highest scores may have 12 times less chance to be eliminated<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;than individuals with lowest scores<br><br>(Note that selection may also be achieved through differential reproduction<br>(see parameter Selectivity))<br><br>Important: For selection pressure to operate properly, scores should always be positive<br><br>Warning: This selection method tends to "saturate": when most scores reach high values,<br>the method is blind to slight differences among individuals. However, it might be less<br>violent than the selectivity method, which has converse qualities.<br><br>At the beginning of the 'Selection pressure' process, scores are linearly converted into life points (from 0 to SelectionPressure). Then individuals are repeatedly exposed to random accidents that cost them a life point. The process is repeated until the size of the population is brought back to its maximal value.]]></info></Description>
-			<Value>0</Value>
+			<Value>10</Value>
 		</Parameter>
 		<Parameter>
 			<Name>Selectivity</Name>
 			<Description><info><![CDATA[Defines how parenthood is biased toward individuals with high scores<br><br>S == 0 --> no bias<br>S == 1 --> elitism is roughly linear<br>S == 20 --> strong elitism<br>S == 40 --> very strong elitism<br><br>(Note that selection may also be achieved through differential mortality <br>(see parameter SelectionPressure))<br><br> Warning: This selection method is elitist. It amplifies small differences among top inidividuals, <br>but fails to discriminate among the crowd. It favours extreme (or lucky) behaviour. The SelectionPressure method has converse <br>qualities.<br><br>At the beginning of the 'selectivity' process, individuals are ranked, based on their score. They are given a number of children that depends on their rank (which depends non-linearly on their score). Parents are repeatedly drawn from the set of individuals that still have children to beget.]]></info></Description>
-			<Value>10</Value>
+			<Value>0</Value>
 		</Parameter>
 		<Parameter>
 			<Name>AgeMax</Name>
@@ -114,7 +114,7 @@
 		<Parameter Scenario="Patriot">
 			<Name>SignallingCost</Name>
 			<Description><info><![CDATA[Proportional cost of investment in signalling]]></info></Description>
-			<Value>80</Value>
+			<Value>150</Value>
 		</Parameter>
 		<Parameter Scenario="Patriot">
 			<Name>FriendImpact</Name>
@@ -172,7 +172,7 @@
 		<Parameter>
 			<Name>TimeLimit</Name>
 			<Description><info><![CDATA[Max number of simulation steps]]></info></Description>
-			<Value>10000</Value>
+			<Value>50030</Value>
 		</Parameter>
 		<Parameter>
 			<Name>ApplicationDir</Name>
@@ -182,17 +182,17 @@
 		<Parameter>
 			<Name>Target</Name>
 			<Description><info><![CDATA[Programme to be executed]]></info></Description>
-			<Value>Sacrifice.py</Value>
+			<Value>Patriot.py</Value>
 		</Parameter>
 		<Parameter>
 			<Name>RunConfigFile</Name>
 			<Description><info><![CDATA[Parameter values that will be read by the programme]]></info></Description>
-			<Value>___Sacrifice.evo</Value>
+			<Value>___Patriot.evo</Value>
 		</Parameter>
 		<Parameter>
 			<Name>DumpStart</Name>
 			<Description><info><![CDATA[Points located below this x-value are discarded from the computation of average values.<br>Average values thus reflect the stable regime.]]></info></Description>
-			<Value>500</Value>
+			<Value>5000</Value>
 		</Parameter>
 	</Parameter>
 	<Parameter>
@@ -205,7 +205,7 @@
 		<Parameter>
 			<Name>Title</Name>
 			<Description><info><![CDATA[Name of the present Configuration Editor]]></info></Description>
-			<Value>Evolife_Sacrifice</Value>
+			<Value>Evolife_Patriot</Value>
 		</Parameter>
 		<Parameter>
 			<Name>Icon</Name>

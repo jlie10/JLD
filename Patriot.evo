@@ -2,7 +2,7 @@ ParamName	ParamValue
 AgeMax	30
 ApplicationDir	.
 AvgFriendDistance	1
-BatchMode	1
+BatchMode	0
 DNAFill	-1
 DisplayPeriod	20
 DumpStart	5000

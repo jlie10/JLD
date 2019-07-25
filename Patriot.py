@@ -33,7 +33,7 @@ class Scenario(EDS.Default_Scenario):
     """
     
     def __init__(self):
-        EDS.Default_Scenario.__init__(self, Name='Patriot', CfgFile='_Params.evo') # loads 'Patriot.evo'
+        EDS.Default_Scenario.__init__(self, Name='Patriot', CfgFile='___Patriot.evo') # loads 'Patriot.evo'
         
     def genemap(self):
         return [('DemandForPatriotism', 8),		# signal level expected from acquaintances
