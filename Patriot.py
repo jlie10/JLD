@@ -59,6 +59,10 @@ class Scenario(EDS.Default_Scenario):
         " Interaction between individuals "
         PerceivedSignal = ET.noise_mult(partner.signal(), self['Noise'])
         PartnerPerceivedSignal = ET.noise_mult(indiv.signal(), self['Noise'])
+        
+        #indiv.get_friend(PerceivedSignal, partner, PartnerPerceivedSignal)
+        # Suppression du gene Demande : bruit ??? 
+        #return
         if PerceivedSignal >= indiv.demand() and PartnerPerceivedSignal >= partner.demand():
             indiv.acquainted(partner)
         
@@ -82,13 +86,13 @@ class Scenario(EDS.Default_Scenario):
         # if Indiv.nbFriends() == 0:
             # Indiv.score(Indiv.score() / self['LonelinessPenalty'])
      
-    #def lives(self, members):
+    def lives(self, members):
     #	" converts scores into life points "
-    #	super().lives(members)
+    	super().lives(members)
         # correction to make negative scores die
-    #	for indiv in members:
-    #		if indiv.score() < 0:	indiv.LifePoints = -1
-        ############################## MODIF: not die -----> more honest // more on plateau ??	
+    	for indiv in members:
+    		if indiv.score() < 0:	indiv.LifePoints = -1
+        ### REMARQUE : sans ceci, l'équilibre obtenu ressemble davantage aux prédictions / à mes résultats.
 
 
     def update_positions(self, members, groupLocation):
